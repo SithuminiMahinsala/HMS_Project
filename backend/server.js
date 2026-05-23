@@ -5,6 +5,7 @@ import cors from "cors";
 import authRoute from "./routes/authRoute.js";
 import doctorRoute from './routes/doctorRoute.js';
 import patientRoute from "./routes/patientRoute.js";
+import appointmentRoutes from "./routes/appointmentRoute.js";
 
 dotenv.config();
 
@@ -20,6 +21,8 @@ app.use("/api/auth", authRoute);
 app.use('/api/doctors', doctorRoute);
 
 app.use("/api/patients", patientRoute);
+
+app.use("/api/appointments", appointmentRoutes);
 
 
 app.get("/", (req, res) => {
